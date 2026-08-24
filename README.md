@@ -15,7 +15,7 @@ Detect whether a speaker is actually **DONE speaking** vs **PAUSING/CONTINUING**
 
 **The trained model is available on Hugging Face:**
 
-🔗 **[Download Model from Hugging Face](YOUR_HF_MODEL_URL)**
+🔗 **https://huggingface.co/Nitinbudania/tiny-turn-detector**
 
 You don't need to train from scratch! Download the pre-trained model and start using it immediately.
 
