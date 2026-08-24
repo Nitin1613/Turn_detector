@@ -1,0 +1,23 @@
+# Core
+torch>=2.0.0
+torchaudio>=2.0.0
+
+# Transformers and Audio
+transformers>=4.30.0
+datasets>=2.14.0
+librosa>=0.10.0
+soundfile>=0.12.0
+
+# HTTP requests for streaming
+requests>=2.25.0
+
+# Training and Evaluation
+scikit-learn>=1.3.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Configuration
+pyyaml>=6.0
+
+# Progress and Visualization
+tqdm>=4.65.0

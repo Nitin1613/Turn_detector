@@ -1,0 +1,52 @@
+# Tiny Turn Detector Configuration
+
+# Model
+model:
+  whisper_model: "openai/whisper-tiny"
+  freeze_encoder: false
+  hidden_dim: 64
+  pooling: "mean"  # Options: mean, max, first
+
+# Audio
+audio:
+  sample_rate: 16000
+  max_duration_sec: 8.0
+  
+# Training
+training:
+  batch_size: 32
+  num_epochs: 10
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  gradient_clip: 1.0
+  val_check_interval: 0.25  # Validate 4 times per epoch
+  early_stopping_patience: 3
+  
+# Data
+data:
+  dataset_name: "pipecat-ai/smart-turn-data-v3.2-train"
+  cache_dir: "./data/cache"
+  splits_dir: "./data/splits"
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  
+  # Streaming mode settings (requires FFmpeg on Windows - not recommended)
+  streaming: false  # Disable streaming mode, use downloaded data instead
+  max_train_samples: 1000  # Number of training samples to use (only for streaming)
+  max_val_samples: 100     # Number of validation samples (only for streaming)
+  max_test_samples: 100    # Number of test samples (only for streaming)
+  
+  # Subset settings (for faster downloads)
+  use_subset: true    # Use only a subset of the dataset
+  max_download_samples: 1000  # Download only first N samples for quick testing
+  
+# Inference
+inference:
+  threshold: 0.5
+  device: "cpu"  # Options: cpu, cuda, mps
+  
+# Paths
+paths:
+  checkpoints_dir: "./checkpoints"
+  logs_dir: "./logs"
